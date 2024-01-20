@@ -37,6 +37,9 @@ const jobSchema = new mongoose.Schema({
     type: String,
     required: [true, "A Job must have Education"],
   },
+  image: {
+    type: String,
+  },
 });
 
 export const Job = mongoose.model("Job", jobSchema);
