@@ -5,7 +5,7 @@ import {
   getAll,
   getById,
   update,
-} from "../controller/testController.js";
+} from "../controller/jobController.js";
 
 const router = Router();
 

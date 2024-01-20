@@ -1,19 +1,14 @@
-// import { Tour } from "./../models/TourModel.js";
-import APIFeatures from "./../utils/apiFeatures.js";
+import { Job } from "../models/jobModel.js";
 
 export const getAll = async (req, res) => {
   try {
-    // For integration of features
-    // const features = new APIFeatures(Tour.find(), req.query)
-    //   .filter()
-    //   .sort()
-    //   .limitFields()
-    //   .paginate();
+    const jobs = await Job.find();
 
-    // const tours = await features.query;
-    console.log("fghjkl");
     res.status(200).send({
       message: "success",
+      data: {
+        jobs,
+      },
     });
   } catch (err) {
     res.status(400).send({
